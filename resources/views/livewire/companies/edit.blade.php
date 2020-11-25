@@ -1,3 +1,48 @@
 <div>
-    {{-- Because she competes with no one, no one can compete with her. --}}
+    <div class="card">
+        <div class="card-body">
+            <form wire:submit.prevent="update">
+                <input type="hidden" wire:model="postId">
+                <div class="form-group">
+                    <label>Nama</label>
+                    <input type="text" wire:model="nama" class="form-control @error('nama') is-invalid @enderror" placeholder="Masukkan nama">
+                    @error('nama')
+                        <span class="invalid-feedback">
+                                {{ $message }}
+                         </span>
+                    @enderror
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                   <input type="email" wire:model="email" class="form-control @error('email') is-invalid @enderror" rows="4" placeholder="Masukkan Email">
+                   @error('email')
+                        <span class="invalid-feedback">
+                                {{ $message }}
+                         </span>
+                    @enderror
+                </div>
+                <div class="form-group">
+                            <label for="logo" class="block text-gray-700 text-sm font-bold mb-2">Logo:</label>
+                            <div class="mb-3">
+                            <input type="file" wire:model="logo" class="">
+                            <div>
+                                @error('logo') <span class="text-sm text-red-500 italic">{{ $message }}</span>@enderror
+                            </div>
+                            <div wire:loading wire:target="logo" class="text-sm text-gray-500 italic">Uploading...</div>
+                            </div>
+                        </div>
+
+                    <div class="form-group">
+                    <label>Website</label>
+                   <input type="text" wire:model="website" class="form-control @error('website') is-invalid @enderror" rows="4" placeholder="Masukkan website">
+                   @error('website')
+                        <span class="invalid-feedback">
+                                {{ $message }}
+                         </span>
+                    @enderror
+                </div>
+                <button type="submit" class="btn btn-primary">UPDATE</button>
+            </form>
+        </div>
+    </div>
 </div>
