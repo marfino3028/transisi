@@ -1,3 +1,17 @@
+<x-slot name="header">
+    <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+        Data Companies
+    </h2>
+</x-slot>
+   @if (session()->has('message'))
+                <div class="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md my-3" role="alert">
+                    <div class="flex">
+                        <div>
+                            <p class="text-sm">{{ session('message') }}</p>
+                        </div>
+                    </div>
+                </div>
+            @endif
 <div>
     <a href="{{ route('companies.create') }}" class="btn btn-md btn-success mb-3">TAMBAH Companies</a>
     <table class="table table-bordered">

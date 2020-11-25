@@ -25,7 +25,7 @@ class Index extends Component
 }
     public function render()
     {
-        $this->employees = Employees::join('companies', 'employees.companies_id', '=', 'companies.id')
+        $this->employees = Employees::join('companies', 'employees.companies_id',  'companies.id')
         ->select('employees.*', 'companies.nama AS companies')->get(); //MEMBUAT QUERY UNTUK MENGAMBIL DATA
         return view('livewire.employees.index', [
             'employees' => Employees::latest()->paginate(5)

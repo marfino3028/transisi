@@ -13,6 +13,6 @@ class Employees extends Model
         'companies_id',
     ];
     public function companies(){
-        return $this->hasMany(\App\Models\Companies::class, 'companies_id');
+        return $this->hasMany(\App\Models\Companies::class, 'id');
     }
 }

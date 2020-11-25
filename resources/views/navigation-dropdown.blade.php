@@ -6,7 +6,7 @@
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <x-jet-application-mark class="block h-9 w-auto" />
+                        <td class="border px-4 py-2"><img  src="{{ asset('storage/logo.png') }}" id="myImg" alt="Transisi" width="150px" height="150px">
                     </a>
                 </div>
 

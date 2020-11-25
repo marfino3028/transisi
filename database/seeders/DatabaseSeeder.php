@@ -39,31 +39,31 @@ class DatabaseSeeder extends Seeder
         Companies::create([
             'nama' => 'companies1',
             'email' => 'companies1@transisi.id',
-            'logo' => 'google.jpg',
+            'logo' => 'google.png',
             'website' => 'google.com',
         ]);
         Companies::create([
             'nama' => 'companies2',
             'email' => 'companies2@transisi.id',
-            'logo' => 'facebook.jpg',
+            'logo' => 'facebook.png',
             'website' => 'facebook.com',
         ]);
         Companies::create([
             'nama' => 'companies3',
             'email' => 'companies3@transisi.id',
-            'logo' => 'instagram.jpg',
+            'logo' => 'instagram.png',
             'website' => 'instagram.com',
         ]);
         Companies::create([
             'nama' => 'companies4',
             'email' => 'companies4@transisi.id',
-            'logo' => 'twitter.jpg',
+            'logo' => 'twitter.png',
             'website' => 'twitter.com',
         ]);
         Companies::create([
             'nama' => 'companies5',
             'email' => 'companies5@transisi.id',
-            'logo' => 'path.jpg',
+            'logo' => 'path.png',
             'website' => 'path.com',
         ]);
         
